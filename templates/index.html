@@ -2,10 +2,17 @@
 {% block content %}
 
 
-
-<div class="homepage"> 
-    <h1>Welcome!</h1>
+{% if generated %}
+<div>
+{{ text }}
 </div>
+    
+{% else %}
+<h1>Click the Button to Generate dissertation!</h1>
+<form method="POST">
+    <input type="submit" name="Generate" value="Generate" id="Generate">
+</form>
 
+{% endif %}
 
 {% endblock %}

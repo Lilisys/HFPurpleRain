@@ -9,7 +9,8 @@
     <title>Make it Rain</title>
 </head>
 <body>
-
+    <script type="text/javascript" src = {{url_for('static', filename = 'js/canvas.js')}}></script>
+    <a href = "/"><img src={{url_for('static', filename = 'crest.png')}}></a>
 
   <div id="wrapper" class="center">
     {% block content %}{% endblock %}
