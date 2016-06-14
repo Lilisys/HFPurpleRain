@@ -25,7 +25,12 @@ def main_route_form():
     result = json.loads(r.text)
     options["generated"] = True
     options["edit"] = False
-    options["text"] = result["message"]
+    titles = ""
+    for i in range(len(result["message"])):
+        titles += result["message"][i]
+        titles += '\n'
+
+    options["text"] = titles
     return render_template("index.html", **options)
 
 
