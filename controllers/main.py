@@ -21,11 +21,11 @@ def edit(text):
 @main.route('/', methods=['POST'])
 def main_route_form():
     options = {}
-    r = requests.get(localhost:8081)
+    r = requests.get("http://localhost:8081/")
     result = json.loads(r.text)
     options["generated"] = True
     options["edit"] = False
-    options["text"] = "ASDFASDFASDFASDF HEYYYY DISSERTATION HERE"   
+    options["text"] = result["message"]
     return render_template("index.html", **options)
 
 
